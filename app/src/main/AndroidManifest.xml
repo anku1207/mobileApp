@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uav.rof">
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="barcode" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:icon="@drawable/rof_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/rof_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.PickupConfirmation"></activity>
+        <activity
+            android:name=".activity.Splash_Screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SingleTextView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ListViewSingleText"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AutoSearchView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BarcodeScanner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Booking"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.GmailLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Dialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/popup" />
+        <activity
+            android:name=".activity.SingleImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/popup" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.uav.rof.provider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.IpAddressSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AwbQuery"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activity.PickupActivity" />
+        <activity android:name=".activity.Camera_Preview_Setting" />
+        <activity android:name=".activity.Click_Image_Without_Preview" />
+        <activity android:name=".activity.VendorBooking" />
+        <activity android:name=".activity.BookingReceived" />
+    </application>
+
+</manifest>

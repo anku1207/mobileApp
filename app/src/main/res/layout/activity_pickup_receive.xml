@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/rof_backbutton"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/back_activity_button"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Booking Received"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/title"
+            android:textColor="@color/white"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activity.Booking"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/rof_book_from_icon"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Awb N0."
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/edittext_bottom_line">
+                        <EditText
+                            android:id="@+id/bookingawbno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@null"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text" />
+                        <ImageButton
+                            android:id="@+id/cameraofawbno"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:src="@drawable/rof_camera_btn_icon" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewlastno"
+                android:textAlignment="center"
+                android:textSize="15dp"/>
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/rof_weight"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Weight"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingBottom="10dp"
+
+                        android:paddingTop="5dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    android:src="@drawable/rof_servicetype"
+                    style="@style/inputIcons"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Service Type"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+                    <EditText
+                        android:id="@+id/servicename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="number"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp" />
+                    <EditText
+                        android:id="@+id/serviceid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="number"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:id="@+id/forwarder_awb_layout"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/rof_book_from_icon"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Forwarding Awb N0."
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/edittext_bottom_line">
+                        <EditText
+                            android:id="@+id/forwardingawbno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@null"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text" />
+                        <ImageButton
+                            android:id="@+id/cameraforwardingawbno"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:src="@drawable/rof_camera_btn_icon" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:id="@+id/forwarder_layout"
+                >
+                <ImageView
+
+                    android:src="@drawable/rof_forwarder_from_icon"
+                    style="@style/inputIcons"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Forwarder"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+                    <EditText
+                        android:id="@+id/vendorforwarding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="number"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp" />
+                    <EditText
+                        android:id="@+id/vendorforwardingid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="number"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:editable="false"
+
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:id="@+id/pickupreceivesave"
+                android:background="@color/colorPrimary"
+                android:text="Save"
+                android:textColor="@color/white"
+
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
